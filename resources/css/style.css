@@ -1,0 +1,109 @@
+/* Styles for Omnifood project */
+
+/*
+  1. Typography
+
+    - font sizes: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    - font weights:
+      - default: 400
+
+    - line heights
+      - default: 1
+
+  2. Color
+
+    - cf. CSS variables
+
+  5. Using shadows
+
+  6. Using border radius
+
+  7. Using white space
+
+  - spacing: 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+:root {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  /* colors */
+  --main-color: #E67E22;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* extracts ampersand character from Baskerville-Italics font*/
+@font-face {
+  font-family: 'Ampersand';
+  src: url('../../vendors/fonts/baskerville-pro-italic-webfont.eot');
+  src: url('../../vendors/fonts/baskerville-pro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../vendors/fonts/baskerville-pro-italic-webfont.woff') format('woff'),
+    url('../../vendors/fonts/baskerville-pro-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  unicode-range: U+0026;
+}
+
+body {
+  /* maybe use font shorthand here */
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+button { cursor: pointer; }
+
+a:link,
+a:visited { /* styles */ }
+
+a:hover,
+a:focus,
+a:active { /* styles */ }
+
+/* -- Accessibility -- */
+
+/* from HTML5 Boilerplate */
+/* hides element */
+.hide-vis {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* hides text */
+.hide-text {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Bump off the page but make accessible for screen readers */
+/* figcaption {
+  text-indent: -9999px;
+} */
+
+/* -- Optional Styles -- */
+
+  /* use image as list-style image with more control,
+   alternatively use a background image with content: " "
+    li::before {
+    content: url(accept.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  */
