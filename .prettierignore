@@ -1,0 +1,2 @@
+# exclude all styles used for debugging/developing
+debug-*.css

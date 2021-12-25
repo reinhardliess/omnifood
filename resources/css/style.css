@@ -25,28 +25,33 @@
 
 */
 
+@import "debug-styles.css";
+
 :root {
   /* 1rem = 10px */
   font-size: 62.5%;
   box-sizing: border-box;
 
   /* colors */
-  --main-color: #E67E22;
+  --main-color: #e67e22;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-/* extracts ampersand character from Baskerville-Italics font*/
+/* extracts ampersand character from Baskerville-Italics font */
 @font-face {
-  font-family: 'Ampersand';
-  src: url('../../vendors/fonts/baskerville-pro-italic-webfont.eot');
-  src: url('../../vendors/fonts/baskerville-pro-italic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../../vendors/fonts/baskerville-pro-italic-webfont.woff') format('woff'),
-    url('../../vendors/fonts/baskerville-pro-italic-webfont.ttf') format('truetype');
+  font-family: Ampersand;
+  src: url("../../vendors/fonts/baskerville-pro-italic-webfont.eot");
+  src:
+    url("../../vendors/fonts/baskerville-pro-italic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../../vendors/fonts/baskerville-pro-italic-webfont.woff") format("woff"),
+    url("../../vendors/fonts/baskerville-pro-italic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
   unicode-range: U+0026;
@@ -54,20 +59,29 @@
 
 body {
   /* maybe use font shorthand here */
+  font-size: 1.6rem;
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
 }
 
-button { cursor: pointer; }
+/* -- Global element styles -- */
+
+button {
+  cursor: pointer;
+}
 
 a:link,
-a:visited { /* styles */ }
+a:visited {
+  /* styles */
+}
 
 a:hover,
 a:focus,
-a:active { /* styles */ }
+a:active {
+  /* styles */
+}
 
 /* -- Accessibility -- */
 
@@ -98,7 +112,7 @@ a:active { /* styles */ }
 
 /* -- Optional Styles -- */
 
-  /* use image as list-style image with more control,
+/* use image as list-style image with more control,
    alternatively use a background image with content: " "
     li::before {
     content: url(accept.png);
