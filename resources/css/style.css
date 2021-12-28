@@ -6,18 +6,20 @@
     - font sizes: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
     - font weights:
-      - default: 400
+      - default: 400, 600
 
     - line heights
-      - default: 1
+      - default: 1, 1.1, 1.5
 
   2. Color
 
-    - cf. CSS variables
+    - cf. CSS variables :root
 
   5. Using shadows
 
   6. Using border radius
+
+  - 9px, 50%
 
   7. Using white space
 
@@ -33,7 +35,13 @@
   box-sizing: border-box;
 
   /* colors */
-  --main-color: #e67e22;
+  /* brand color */
+  --color-main: #e67e22;
+  --color-main-tint90: #fdf2e9;
+  --color-main-shade10: #cf711f;
+  /* neutral greys */
+  --color-neutral1: #333;
+  --color-neutral2: #555;
 }
 
 *,
@@ -48,10 +56,12 @@
 @font-face {
   font-family: Ampersand;
   src: url("../../vendors/fonts/baskerville-pro-italic-webfont.eot");
-  src:
-    url("../../vendors/fonts/baskerville-pro-italic-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../../vendors/fonts/baskerville-pro-italic-webfont.woff") format("woff"),
-    url("../../vendors/fonts/baskerville-pro-italic-webfont.ttf") format("truetype");
+  src: url("../../vendors/fonts/baskerville-pro-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../vendors/fonts/baskerville-pro-italic-webfont.woff")
+      format("woff"),
+    url("../../vendors/fonts/baskerville-pro-italic-webfont.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: italic;
   unicode-range: U+0026;
@@ -60,10 +70,10 @@
 body {
   /* maybe use font shorthand here */
   font-size: 1.6rem;
-  font-family: sans-serif;
+  font-family: Ampersand, Rubik, sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-neutral2);
 }
 
 /* -- Global element styles -- */
@@ -83,41 +93,120 @@ a:active {
   /* styles */
 }
 
-/* -- Accessibility -- */
+/* -- Reusable Styles -- */
 
-/* from HTML5 Boilerplate */
-/* hides element */
-.hide-vis {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
 
-/* hides text */
-.hide-text {
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-neutral2);
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.9rem;
+  transition: background 0.3s;
 }
 
-/* Bump off the page but make accessible for screen readers */
-/* figcaption {
-  text-indent: -9999px;
-} */
+.btn-primary:link,
+.btn-primary:visited {
+  color: #fff;
+  background-color: var(--color-main);
+  padding: 1.6rem 3.2rem;
+}
 
-/* -- Optional Styles -- */
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--color-main-shade10);
+}
 
-/* use image as list-style image with more control,
-   alternatively use a background image with content: " "
-    li::before {
-    content: url(accept.png);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.5em;
-  }
-  */
+.btn-secondary:link,
+.btn-secondary:visited {
+  background-color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: var(--color-main-tint90);
+  box-shadow: inset 0 0 0 0.3rem #fff;
+}
+
+/* -- Content -- */
+
+
+
+/* -- Hero section -- */
+
+.section-hero {
+  background-color: var(--color-main-tint90);
+  padding: 4.8rem 0 9.6rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 3.2rem;
+  gap: 9.6rem;
+  margin: 0 auto;
+  max-width: 130rem;
+}
+
+.hero-textbox {
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  color: var(--color-neutral1);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 3.2rem;
+}
+
+.hero-text {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.hero-imgbox {
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 8rem;
+}
+
+.delivered-images {
+  display: flex;
+}
+
+.delivered-images img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 3px solid var(--color-main-tint90);
+  border-radius: 50%;
+}
+
+/* overlap images */
+.delivered-images img:not(:last-child) {
+  margin-right: -1.6rem;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: var(--color-main);
+}

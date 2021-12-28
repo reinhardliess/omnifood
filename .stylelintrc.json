@@ -3,7 +3,8 @@
   "rules": {
     "comment-empty-line-before": null,
     "color-function-notation": null,
+    "declaration-colon-newline-after": null,
     "alpha-value-notation": null,
-    "indentation": 2
+    "indentation": null
   }
 }
