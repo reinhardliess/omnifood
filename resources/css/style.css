@@ -151,6 +151,48 @@ a:active {
   height: 2.4rem;
 }
 
+/* -- Main Navigation -- */
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.nav-list {
+  /* display: inline-block; */
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.nav-list-link:link,
+.nav-list-link:visited {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-neutral1);
+  transition: all 0.3s;
+}
+
+.nav-list-link:hover,
+.nav-list-link:active {
+  color: var(--color-main);
+}
+
+.nav-list-link.nav-cta:link,
+.nav-list-link.nav-cta:visited {
+  /* font-size: 2rem; */
+  /* font-weight: 500; */
+  color: #fff;
+  background-color: var(--color-main);
+  padding: 1.2rem 2.4rem;
+  text-decoration: none;
+  border-radius: var(--bdrs-default);
+}
+
+.nav-list-link.nav-cta:hover,
+.nav-list-link.nav-cta:active {
+  background-color: var(--color-main-shade10);
+}
 /* -- Hero section -- */
 
 .section-hero {
