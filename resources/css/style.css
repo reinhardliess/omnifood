@@ -41,10 +41,11 @@
   --color-main-tint80: #fae5d3;
   --color-main-shade10: #cf711f;
   --color-main-shade20: #b8651b;
-  /* neutral greys */
-  --color-neutral-shade1: #333;
-  --color-neutral-shade2: #555;
-  --color-neutral-tint1: #ccc;
+  /* greys */
+  --color-grey: #7f7f7f;
+  --color-grey-shade60: #333;
+  --color-grey-shade40: #4c4c4c;
+  --color-grey-tint60: #ccc;
 
   /* border-radius */
   --bdrs-default: 9px;
@@ -88,7 +89,7 @@ body {
   font-family: Ampersand, Rubik, sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: var(--color-neutral-shade2);
+  color: var(--color-grey-shade40);
 }
 
 /* -- Global element styles -- */
@@ -149,7 +150,7 @@ a:active {
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
-  color: var(--color-neutral-shade1);
+  color: var(--color-grey-shade60);
   letter-spacing: var(--lspc-reduced1);
   font-weight: 700;
 }
@@ -188,7 +189,7 @@ a:active {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--color-neutral-shade2);
+  color: var(--color-grey-shade40);
   padding: 1.6rem 3.2rem;
   border-radius: var(--bdrs-default);
   transition: background 0.3s;
@@ -252,7 +253,7 @@ a:active {
 .nav-list-link:visited {
   text-decoration: none;
   font-weight: 500;
-  color: var(--color-neutral-shade1);
+  color: var(--color-grey-shade60);
   transition: all 0.3s;
 }
 
@@ -277,7 +278,7 @@ a:active {
   background-color: var(--color-main-shade10);
 }
 
-/* -- Hero section -- */
+/* -- Section: Hero -- */
 
 .section-hero {
   background-color: var(--color-main-tint90);
@@ -368,10 +369,10 @@ a:active {
   filter: brightness(0);
   opacity: 50%;
 }
+
 /* -- Section: How it works -- */
 
 .section-how {
-  /* background-color: lightblue; */
   padding: 9.6rem 0;
 }
 
@@ -381,13 +382,13 @@ a:active {
 .step-number {
   font-size: 8.6rem;
   font-weight: 600;
-  color: var(--color-neutral-tint1);
+  color: var(--color-grey-tint60);
   margin-bottom: 1.6rem;
 }
 
 .step-text {
   font-size: 1.8rem;
-  color: var(--color-neutral-shade1);
+  color: var(--color-grey-shade60);
   line-height: var(--lh-paragraph);
 }
 
