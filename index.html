@@ -18,7 +18,6 @@
       name="robots"
       content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
     />
-
     <style></style>
     <noscript>
       <style>
@@ -29,6 +28,14 @@
       */
       </style>
     </noscript>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <!-- <script defer src=""></script> -->
   </head>
 
@@ -119,22 +126,22 @@
       <section class="section-featured">
         <div class="container">
           <h2 class="heading-featured">As featured in</h2>
-            <div class="logos-box">
-              <img
-                src="resources/img/logos/business-insider.png"
-                alt="business-insider Logo"
-              />
-              <img src="resources/img/logos/forbes.png" alt="Forbes Logo" />
-              <img
-                src="resources/img/logos/techcrunch.png"
-                alt="Techcrunch Logo"
-              />
-              <img
-                src="resources/img/logos/the-new-york-times.png"
-                alt="New York Times Logo"
-              />
-              <img src="resources/img/logos/usa-today.png" alt="USA Today Logo" />
-            </div>
+          <div class="logos-box">
+            <img
+              src="resources/img/logos/business-insider.png"
+              alt="business-insider Logo"
+            />
+            <img src="resources/img/logos/forbes.png" alt="Forbes Logo" />
+            <img
+              src="resources/img/logos/techcrunch.png"
+              alt="Techcrunch Logo"
+            />
+            <img
+              src="resources/img/logos/the-new-york-times.png"
+              alt="New York Times Logo"
+            />
+            <img src="resources/img/logos/usa-today.png" alt="USA Today Logo" />
+          </div>
         </div>
       </section>
 
@@ -198,6 +205,44 @@
               alt="photo of iPhone app, showing delivery confirmation with additional details"
             />
           </div>
+        </div>
+      </section>
+
+      <!-- -- Section: Meals -- -->
+      <section class="section-meals">
+        <div class="container">
+          <span class="subheading">Meals</span>
+          <h2 class="heading-secondary">
+            Omnifood AI chooses from 5,000+ recipes
+          </h2>
+        </div>
+        <div class="container grid grid-3-cols">
+          <div class="meals--meal-card">
+            <div class="meals--img-box">
+              <img
+                src="resources/img/meals/meal-1.jpg"
+                alt="3 bowls with food"
+              />
+            </div>
+            <div class="meals--info-box">
+              <span class="meals--tags meals--tags-vegetarian">Vegetarian</span>
+              <p class="meals--description">Japanese Gyozas</p>
+              <ul class="meals--details">
+                <li><ion-icon class="meals--icon" name="flame-outline"></ion-icon><span><strong>650</strong> Calories</li></span>
+                <li>
+                  <ion-icon class="meals--icon" name="restaurant-outline"></ion-icon><span>
+                    NutriScore
+                    &reg;: <strong>74</strong>
+                  </span>
+                </li>
+                <li>
+                  <ion-icon class="meals--icon" name="star-outline"></ion-icon><span>Rating: <strong>4.9</strong> (537)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="meals--meal-card">column 2</div>
+          <div class="meals--diets">column 3</div>
         </div>
       </section>
     </main>

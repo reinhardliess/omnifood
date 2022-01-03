@@ -5,6 +5,7 @@
     "color-function-notation": null,
     "declaration-colon-newline-after": null,
     "alpha-value-notation": null,
+    "selector-class-pattern": null,
     "indentation": null
   }
 }

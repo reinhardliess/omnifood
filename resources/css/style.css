@@ -27,7 +27,7 @@
 
 */
 
-@import "debug-styles.css";
+/* @import "debug-styles.css"; */
 
 :root {
   /* 1rem = 10px */
@@ -49,6 +49,7 @@
 
   /* border-radius */
   --bdrs-default: 9px;
+  --bdrs-small: 5px;
 
   /* line-height */
   --lh-heading1: 1.1;
@@ -93,6 +94,10 @@ body {
 }
 
 /* -- Global element styles -- */
+
+strong {
+  font-weight: 500;
+}
 
 button {
   cursor: pointer;
@@ -427,4 +432,65 @@ a:active {
 /* stylelint-disable-next-line no-descending-specificity */
 .step-imgbox img {
   width: 35%;
+}
+
+/* -- Section: Meals -- */
+.section-meals {
+  padding: 4.8rem;
+}
+
+.meals--meal-card {
+  color: var(--color-grey-shade60);
+  border-radius: var(--bdrs-default);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+}
+
+.meals--img-box {
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.meals--img-box img {
+  width: 100%;
+}
+
+.meals--info-box {
+  margin: 2.4rem;
+}
+
+.meals--tags {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.meals--tags-vegetarian {
+  background-color: #51cf66;
+}
+
+.meals--description {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.meals--details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.meals--details li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.meals--icon {
+  color: var(--color-main);
 }
