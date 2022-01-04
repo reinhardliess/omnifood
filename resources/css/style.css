@@ -46,6 +46,10 @@
   --color-grey-shade60: #333;
   --color-grey-shade40: #4c4c4c;
   --color-grey-tint60: #ccc;
+  /* tag colors */
+  --color-tag-vegetarian: #69db7c;
+  --color-tag-vegan: #a9e34b;
+  --color-tag-paleo: #ffd43b;
 
   /* border-radius */
   --bdrs-default: 9px;
@@ -103,6 +107,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
+
 a:link,
 a:visited {
   /* styles */
@@ -146,8 +154,16 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.center-text {
+  text-align: center;
+}
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
 }
 
 /* Headings */
@@ -187,6 +203,20 @@ a:active {
   margin-bottom: 2.4rem;
 }
 
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: var(--color-main);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--color-main);
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  border-bottom: 1px solid transparent;
+}
+
 /* Buttons */
 .btn:link,
 .btn:visited {
@@ -197,7 +227,7 @@ a:active {
   color: var(--color-grey-shade40);
   padding: 1.6rem 3.2rem;
   border-radius: var(--bdrs-default);
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-primary:link,
@@ -442,8 +472,15 @@ a:active {
 .meals--meal-card {
   color: var(--color-grey-shade60);
   border-radius: var(--bdrs-default);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.075);
   overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meals--meal-card:hover {
+  /* make shadow larger and more diffused */
+  box-shadow: 0 1.8rem 3.6rem rgba(0, 0, 0, 0.06);
+  transform: translateY(-1rem);
 }
 
 .meals--img-box {
@@ -469,7 +506,16 @@ a:active {
 }
 
 .meals--tags-vegetarian {
-  background-color: #51cf66;
+  /* background-color: #51cf66; */
+  background-color: var(--color-tag-vegetarian);
+}
+
+.meals--tags-vegan {
+  background-color: var(--color-tag-vegan);
+}
+
+.meals--tags-paleo {
+  background-color: var(--color-tag-paleo);
 }
 
 .meals--description {
@@ -481,7 +527,7 @@ a:active {
 .meals--details {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.8rem;
   list-style: none;
 }
 
@@ -493,4 +539,17 @@ a:active {
 
 .meals--icon {
   color: var(--color-main);
+}
+
+.meals--diet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.meals--diet-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.8rem;
 }
