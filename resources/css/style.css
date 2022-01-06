@@ -45,6 +45,7 @@
   --color-grey: #7f7f7f;
   --color-grey-shade60: #333;
   --color-grey-shade40: #4c4c4c;
+  --color-grey-shade10: #727272;
   --color-grey-tint60: #ccc;
   /* tag colors */
   --color-tag-vegetarian: #69db7c;
@@ -97,7 +98,7 @@ body {
   color: var(--color-grey-shade40);
 }
 
-/* -- Global element styles -- */
+/* == Global element styles == */
 
 strong {
   font-weight: 500;
@@ -122,7 +123,7 @@ a:active {
   /* styles */
 }
 
-/* -- Reusable Styles -- */
+/* == Reusable Styles == */
 
 /* Layout */
 /* Fluid Grid */
@@ -253,9 +254,9 @@ a:active {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-/* -- Content -- */
+/* == Content == */
 
-/* -- Header -- */
+/* == Header == */
 
 .header {
   display: flex;
@@ -270,7 +271,7 @@ a:active {
   height: 2.4rem;
 }
 
-/* -- Main Navigation -- */
+/* == Main Navigation == */
 
 .main-nav ul {
   display: flex;
@@ -313,7 +314,7 @@ a:active {
   background-color: var(--color-main-shade10);
 }
 
-/* -- Section: Hero -- */
+/* == Section: Hero == */
 
 .section-hero {
   background-color: var(--color-main-tint90);
@@ -378,7 +379,7 @@ a:active {
   color: var(--color-main);
 }
 
-/* -- Section: Featured In -- */
+/* == Section: Featured In == */
 .section-featured {
   padding: 4.8rem 0 3.2rem;
 }
@@ -405,7 +406,7 @@ a:active {
   opacity: 50%;
 }
 
-/* -- Section: How it works -- */
+/* == Section: How it works == */
 
 .section-how {
   padding: 9.6rem 0;
@@ -464,9 +465,9 @@ a:active {
   width: 35%;
 }
 
-/* -- Section: Meals -- */
+/* == Section: Meals == */
 .section-meals {
-  padding: 4.8rem;
+  padding: 9.6rem 0;
 }
 
 .meals--meal-card {
@@ -552,4 +553,68 @@ a:active {
   align-items: center;
   gap: 0.4rem;
   font-size: 1.8rem;
+}
+
+.meals--all-recipes {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* == Section: Testimonials == */
+.section-testimonials {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 55fr 45fr;
+  background-color: var(--color-main-tint90);
+  /* padding: 0 0 9.6rem 0; */
+}
+
+.testimonials--quote-box {
+  padding: 4.8rem;
+}
+
+.testimonials--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.testimonials--img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+
+.testimonials--text {
+  font-size: 1.8rem;
+  line-height: var(--lh-paragraph);
+  margin-bottom: 1.2rem;
+}
+
+.testimonials--author {
+  color: var(--color-grey-shade10);
+}
+
+/* Gallery */
+.testimonials--gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 3.2rem 0;
+}
+
+.testimonials--gallery-container {
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.testimonials--gallery-container img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.testimonials--gallery-container img:hover {
+  transform: scale(1.1);
 }
