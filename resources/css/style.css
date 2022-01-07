@@ -139,6 +139,10 @@ a:active {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid-center-v {
   align-items: center;
 }
@@ -155,6 +159,34 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* Custom styles */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.8rem;
+}
+
+.icon-list {
+  color: var(--color-main);
+}
+
+.icon--bg-round {
+  color: var(--color-main);
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 1.2rem;
+  background-color: var(--color-main-tint80);
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
 .center-text {
   text-align: center;
 }
@@ -164,7 +196,7 @@ a:active {
 }
 
 .margin-bottom-md {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
 }
 
 /* Headings */
@@ -196,7 +228,7 @@ a:active {
 
 .subheading {
   display: block;
-  color: var(--color-main);
+  color: var(--color-main-shade10);
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -538,23 +570,6 @@ a:active {
   gap: 0.8rem;
 }
 
-.meals--icon {
-  color: var(--color-main);
-}
-
-.meals--diet-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.meals--diet-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 1.8rem;
-}
-
 .meals--all-recipes {
   font-size: 1.6rem;
   text-align: center;
@@ -617,4 +632,99 @@ a:active {
 
 .testimonials--gallery-container img:hover {
   transform: scale(1.1);
+}
+
+/* == Section: Pricing == */
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing--card {
+  width: 75%;
+  padding: 4.8rem;
+  border-radius: var(--bdrs-default);
+}
+
+.pricing--card:nth-child(1) {
+  justify-self: end;
+  box-shadow: inset 0 0 0 3px var(--color-main-tint90);
+}
+
+.pricing--card:nth-child(2) {
+  position: relative;
+  background-color: var(--color-main-tint90);
+  overflow: hidden;
+}
+
+.pricing--card:nth-child(2)::after {
+  content: "Best Value";
+  background-color: var(--color-tag-paleo);
+  position: absolute;
+  top: 5%;
+  right: -9.5%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 4rem;
+  transform: rotate(45deg);
+}
+
+.pricing--plan-info {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.pricing--plan-name {
+  color: var(--color-main-shade10);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.pricing--plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: var(--color-grey-shade60);
+  margin-bottom: 1.6rem;
+}
+
+.pricing--plan-price span {
+  font-size: 3rem;
+  padding-right: 0.5rem;
+}
+
+.pricing--plan-price-text {
+}
+
+.pricing--sign-up {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.pricing--sub-text {
+  font-size: 1.6rem;
+  text-align: center;
+  /* padding: 9.6rem 0; */
+  margin-bottom: 9.6rem;
+}
+
+/* Features */
+
+.pricing--features {
+}
+
+.pricing--features-box {
+}
+
+.pricing--features-heading {
+  color: var(--color-grey-shade60);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.pricing--features-text {
+  font-size: 1.6rem;
+  line-height: var(--lh-paragraph);
 }
