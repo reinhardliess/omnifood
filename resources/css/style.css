@@ -39,6 +39,7 @@
   --color-main: #e67e22;
   --color-main-tint90: #fdf2e9;
   --color-main-tint80: #fae5d3;
+  --color-main-tint20: #e98b38;
   --color-main-shade10: #cf711f;
   --color-main-shade20: #b8651b;
   /* greys */
@@ -727,4 +728,30 @@ a:active {
 .pricing--features-text {
   font-size: 1.6rem;
   line-height: var(--lh-paragraph);
+}
+
+/* == Section: CTA == */
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta--container {
+  grid-template-columns: 2fr 1fr;
+  background-color: var(--color-main);
+  background-image: linear-gradient(to bottom right, var(--color-main), var(--color-main-tint20));
+  height: 50rem;
+  border-radius: var(--bdrs-default);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cta--form-box {
+}
+
+.cta--img-box {
+  background-image: linear-gradient(to bottom right,
+    rgba(230, 125, 34, 0.247), rgba(233, 139, 56, 0.219)),
+    url("../img/eating.jpg");
+  background-size: cover;
 }
