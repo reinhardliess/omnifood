@@ -1,0 +1,124 @@
+/* Media queries for the Omnifood project */
+
+/* == Breakpoint: 1344px, small laptops == */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .testimonials--gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* reduce the number of gallery photos by 2 */
+  .testimonials--gallery-container:nth-child(-n + 2) {
+    display: none;
+  }
+}
+
+/* == Breakpoint: 1200px, tablets, landscape == */
+@media (max-width: 75em) {
+  :root {
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .main-nav ul {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .testimonials--quote-box {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/* == Breakpoint: 944px, tablets == */
+@media (max-width: 59em) {
+  :root {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .hero-textbox,
+  .hero-imgbox {
+    text-align: center;
+  }
+
+  .hero-textbox {
+    padding: 0 9.6rem;
+  }
+
+  .hero-text {
+    margin-bottom: 4.8rem;
+  }
+
+  .delivered-meals {
+    margin-top: 3.2rem;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .logos-box img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meals--info-box {
+    margin: 3.2rem 3.2rem 4.8rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials--gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Restore images hidden in Breakpoint: 1344px */
+  .testimonials--gallery-container:nth-child(-n + 2) {
+    display: block;
+  }
+
+  .list li {
+    line-height: var(--lh-heading2);
+  }
+
+  .cta--container {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta--form {
+    grid-template-columns: 1fr;
+  }
+}

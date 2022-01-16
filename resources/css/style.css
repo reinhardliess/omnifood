@@ -27,7 +27,7 @@
 
 */
 
-/* @import "debug-styles.css"; */
+@import "debug-styles.css";
 
 :root {
   /* 1rem = 10px */
@@ -48,6 +48,7 @@
   --color-grey-shade60: #333;
   --color-grey-shade40: #4c4c4c;
   --color-grey-shade10: #727272;
+  --color-grey-tint40: #b2b2b2;
   --color-grey-tint60: #ccc;
   /* tag colors */
   --color-tag-vegetarian: #69db7c;
@@ -120,6 +121,11 @@ button {
   cursor: pointer;
 }
 
+p,
+li {
+  line-height: var(--lh-paragraph);
+}
+
 ul {
   list-style: none;
 }
@@ -181,7 +187,7 @@ a:active {
 .list li {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
   font-size: 1.8rem;
 }
 
@@ -433,7 +439,6 @@ a:active {
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
-  /* TODO: Implement grey map */
   color: var(--color-grey);
   text-align: center;
   margin-bottom: 2.4rem;
@@ -538,7 +543,7 @@ a:active {
 }
 
 .meals--info-box {
-  margin: 2.4rem;
+  margin: 3.2rem 4.8rem 4.8rem;
 }
 
 .meals--tags {
@@ -598,7 +603,7 @@ a:active {
 }
 
 .testimonials--quote-box {
-  padding: 4.8rem;
+  padding: 9.6rem;
 }
 
 .testimonials--grid {
@@ -629,7 +634,7 @@ a:active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
-  padding: 3.2rem 0;
+  padding: 1.6rem;
 }
 
 .testimonials--gallery-container {
@@ -738,7 +743,7 @@ a:active {
 }
 
 .pricing--features-text {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: var(--lh-paragraph);
 }
 
@@ -776,6 +781,7 @@ Use linear gradient with transparency
     ),
     url("../img/eating.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 /* Sign-up form */
@@ -797,6 +803,8 @@ Use linear gradient with transparency
 }
 
 .cta--form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: 4.8rem;
   row-gap: 3.2rem;
 }
@@ -818,12 +826,15 @@ Use linear gradient with transparency
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
+  background-color: var(--color-main-tint90);
 }
 
 .cta--form input::placeholder {
-  color: var(--color-grey-tint60);
+  /* color: var(--color-grey-tint60); */
+  color: var(--color-grey-tint40);
 }
 
+/* align sign-up button */
 .cta--form div:last-child {
   align-self: end;
 }
@@ -853,8 +864,9 @@ Use linear gradient with transparency
 /* == Footer == */
 
 .footer {
-  padding: 4.8rem 0 9.6rem;
+  padding: 9.6rem 0;
   color: var(--color-grey-shade40);
+  border-top: 1px solid var(--color-main-tint90);
 }
 
 .footer--container {
@@ -922,9 +934,9 @@ Use linear gradient with transparency
 
 .footer--nav-link:link,
 .footer--nav-link:visited {
- text-decoration: none;
- color: var(--color-grey);
- transition: all 0.3s;
+  text-decoration: none;
+  color: var(--color-grey);
+  transition: all 0.3s;
 }
 
 .footer--nav-link:hover,
