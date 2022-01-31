@@ -53,14 +53,82 @@
 }
 
 /* == Breakpoint: 944px, tablets == */
-@media (max-width: 59em) {
+@media (max-width: 60em) {
   :root {
     font-size: 50%;
+  }
+
+  /* prevent sliding-in mobile nav from being visible */
+  /* body {
+    overflow-x: hidden;
+  } */
+
+  /* == Mobile Navigation == */
+  .header--mobile-btn-nav {
+    background: none;
+    border: none;
+    display: block;
+  }
+
+  .mobile-nav-icon {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .mobile-nav-icon[name="close-outline"] {
+    display: none;
+  }
+
+  .main-nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.904);
+    transition: all 0.4s;
+    /* Hide by default */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    /* transform: translateX(100%); */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    font-size: 2.4rem;
+  }
+
+  /* Mobile navigation active */
+
+  /* create modal window */
+  body.mobile-nav-open {
+    overflow-y: hidden;
+  }
+
+  .mobile-nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    /* slide in */
+    transform: translateX(0);
+  }
+
+  .mobile-nav-open .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .mobile-nav-open .mobile-nav-icon[name="menu-outline"] {
+    display: none;
   }
 
   .hero {
     grid-template-columns: 1fr;
     gap: 6.4rem;
+    padding: 0 8rem;
   }
 
   .hero-textbox,
@@ -110,6 +178,11 @@
     display: block;
   }
 
+  .pricing--card {
+    /* width: 75%; */
+    width: 100%;
+    padding: 4.5rem;
+  }
   .list li {
     line-height: var(--lh-heading2);
   }
@@ -121,4 +194,10 @@
   .cta--form {
     grid-template-columns: 1fr;
   }
+
+  .meals--description {
+    font-size: 2.2rem;
+  }
+}
+
 }

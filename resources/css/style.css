@@ -310,6 +310,7 @@ a:active {
 /* == Header == */
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -324,10 +325,15 @@ a:active {
 
 /* == Main Navigation == */
 
+.header--mobile-btn-nav {
+  display: none;
+}
+
 .main-nav ul {
   display: flex;
   align-items: center;
   gap: 4.8rem;
+  font-size: 1.8rem;
 }
 
 .nav-list {
