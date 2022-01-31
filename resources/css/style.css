@@ -33,6 +33,7 @@
   /* 1rem = 10px */
   font-size: 62.5%;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 
   /* colors */
   /* brand color */
@@ -109,6 +110,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--color-grey-shade40);
+  overflow-x: hidden;
 }
 
 /* == Global element styles == */
@@ -124,6 +126,10 @@ button {
 p,
 li {
   line-height: var(--lh-paragraph);
+}
+
+li {
+  list-style: none;
 }
 
 ul {
@@ -187,19 +193,21 @@ a:active {
 .list li {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.4rem;
   font-size: 1.8rem;
 }
 
 .icon-list {
   color: var(--color-main);
+  width: 3rem;
+  height: 3rem;
 }
 
 .icon--bg-round {
   color: var(--color-main);
-  width: 2.4rem;
-  height: 2.4rem;
-  padding: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 1.6rem;
   background-color: var(--color-main-tint80);
   border-radius: 50%;
   margin-bottom: 3.2rem;
@@ -339,7 +347,6 @@ a:active {
 .nav-list {
   /* display: inline-block; */
   list-style: none;
-  font-size: 1.8rem;
 }
 
 .nav-list-link:link,
@@ -588,14 +595,20 @@ a:active {
   list-style: none;
 }
 
+.meals--icon-list {
+  color: var(--color-main);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 .meals--details li {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.4rem;
 }
 
 .meals--all-recipes {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -729,6 +742,7 @@ a:active {
 .pricing--sub-text {
   font-size: 1.6rem;
   text-align: center;
+  line-height: var(--lh-paragraph);
   /* padding: 9.6rem 0; */
   margin-bottom: 9.6rem;
 }
@@ -743,7 +757,7 @@ a:active {
 
 .pricing--features-heading {
   color: var(--color-grey-shade60);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
@@ -825,7 +839,7 @@ Use linear gradient with transparency
 .cta--form input,
 .cta--form select {
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   width: 100%;
   padding: 1.2rem;
   border-radius: var(--bdrs-default);
@@ -933,9 +947,8 @@ Use linear gradient with transparency
   gap: 2.4rem;
 }
 
-.footer--nav-link {
-  display: inline-flex;
-  align-items: center;
+.footer--nav-link span {
+  vertical-align: middle;
 }
 
 .footer--nav-link:link,
@@ -965,9 +978,11 @@ Use linear gradient with transparency
   margin-right: 0.8rem;
   width: 1.6rem;
   height: 1.6rem;
+  vertical-align: middle;
 }
 
 .footer--subheading {
   font-weight: 600;
   margin-bottom: 3.2rem;
+  font-size: 1.8rem;
 }
