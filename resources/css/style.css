@@ -33,7 +33,6 @@
   /* 1rem = 10px */
   font-size: 62.5%;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
 
   /* colors */
   /* brand color */
@@ -110,6 +109,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--color-grey-shade40);
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
 

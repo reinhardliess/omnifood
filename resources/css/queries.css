@@ -68,6 +68,7 @@
     background: none;
     border: none;
     display: block;
+    z-index: 9999;
   }
 
   .mobile-nav-icon {
