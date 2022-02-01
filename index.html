@@ -37,32 +37,33 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- <script defer src=""></script> -->
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="./resources/js/script.js"></script>
   </head>
 
   <body>
     <header class="header">
       <div class="logo">
-        <a href=""
+        <a href="#"
           ><img src="resources/img/omnifood-logo.png" alt="Omnifood logo"
         /></a>
       </div>
       <nav aria-label="Site navigation" class="main-nav">
         <ul>
           <li class="nav-list">
-            <a href="#" class="nav-list-link">How it Works</a>
+            <a href="#how" class="nav-list-link">How it Works</a>
           </li>
           <li class="nav-list">
-            <a href="#" class="nav-list-link">Meals</a>
+            <a href="#meals" class="nav-list-link">Meals</a>
           </li>
           <li class="nav-list">
-            <a href="#" class="nav-list-link">Testimonials</a>
+            <a href="#testimonials" class="nav-list-link">Testimonials</a>
           </li>
           <li class="nav-list">
-            <a href="#" class="nav-list-link">Pricing</a>
+            <a href="#pricing" class="nav-list-link">Pricing</a>
           </li>
           <li class="nav-list">
-            <a href="#" class="nav-list-link nav-cta">Try for free</a>
+            <a href="#cta" class="nav-list-link nav-cta">Try for free</a>
           </li>
         </ul>
       </nav>
@@ -85,10 +86,10 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn-primary margin-right-sm">
+            <a href="#cta" class="btn btn-primary margin-right-sm">
               Start eating well
             </a>
-            <a href="#" class="btn btn-secondary"> Learn more &darr; </a>
+            <a href="#how" class="btn btn-secondary"> Learn more &darr; </a>
             <div class="delivered-meals">
               <div class="delivered-images" title="Happy Customers">
                 <img
@@ -154,7 +155,7 @@
       </section>
 
       <!-- == Section: How it works == -->
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How Omnifood works</span>
           <h2 class="heading-secondary">
@@ -217,7 +218,7 @@
       </section>
 
       <!-- == Section: Meals == -->
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -331,7 +332,7 @@
         </div>
       </section>
       <!-- == Section: Testimonials == -->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials--quote-box">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -469,7 +470,7 @@
           </figure>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">Eat well without breaking the bank</h2>
@@ -503,7 +504,7 @@
               </li>
             </ul>
             <div class="pricing--sign-up">
-              <a href="#" class="btn btn-primary"> Start eating well </a>
+              <a href="#cta" class="btn btn-primary"> Start eating well </a>
             </div>
           </div>
           <!-- == Complete Plan == -->
@@ -534,7 +535,7 @@
               </li>
             </ul>
             <div class="pricing--sign-up">
-              <a href="#" class="btn btn-primary"> Start eating well </a>
+              <a href="#cta" class="btn btn-primary"> Start eating well </a>
             </div>
           </div>
         </div>
@@ -585,7 +586,7 @@
         </div>
       </section>
       <!-- == Section: CTA == -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta--container">
             <div class="cta--form-box">
