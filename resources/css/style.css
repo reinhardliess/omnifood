@@ -6,7 +6,7 @@
     - font sizes: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
     - font weights:
-      - default: 400, 500, 600
+      - default: 400, 500, 600, 700
 
     - line heights
       - default: 1, 1.1, 1.5
@@ -27,7 +27,7 @@
 
 */
 
-/* @import "debug-styles.css"; */
+@import "debug-styles.css";
 
 :root {
   /* 1rem = 10px */
@@ -63,6 +63,7 @@
   /* border-radius */
   --bdrs-default: 9px;
   --bdrs-small: 5px;
+  --bdrs-bigger: 11px;
 
   /* line-height */
   --lh-heading1: 1.1;
@@ -105,11 +106,7 @@
 }
 
 body {
-  /* maybe use font shorthand here */
-  font-size: 1.6rem;
-  font-family: Ampersand, Rubik, sans-serif;
-  line-height: 1;
-  font-weight: 400;
+  font: 400 1.6rem/1 Ampersand, Rubik, sans-serif;
   color: var(--color-grey-shade40);
 
   /* Only works if there is nothing absolutely positioned in relation to body */
@@ -547,7 +544,7 @@ ul {
 
 .meals--meal-card {
   color: var(--color-grey-shade60);
-  border-radius: var(--bdrs-default);
+  border-radius: var(--bdrs-bigger);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.075);
   overflow: hidden;
   transition: all 0.4s;
@@ -692,7 +689,7 @@ ul {
 .pricing--card {
   width: 75%;
   padding: 4.8rem;
-  border-radius: var(--bdrs-default);
+  border-radius: var(--bdrs-bigger);
 }
 
 .pricing--card:nth-child(1) {
@@ -795,7 +792,7 @@ ul {
     var(--color-main)
   );
   /* height: 50rem; */
-  border-radius: var(--bdrs-default);
+  border-radius: var(--bdrs-bigger);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
