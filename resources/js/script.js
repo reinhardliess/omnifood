@@ -8,18 +8,16 @@ function updateCopyrightDate() {
 
 // make mobile navigation work
 function enableMobileNavigation() {
-  const bodyEl = document.querySelector("body");
   const btnMobileNavEl = document.querySelector(".header--mobile-btn-nav");
 
   btnMobileNavEl.addEventListener("click", function () {
-    bodyEl.classList.toggle("mobile-nav-open");
+    document.body.classList.toggle("mobile-nav-open");
   });
 }
 
 // Implement smooth scrolling for all local links
 function enableSmoothScrolling() {
   const allLinks = document.querySelectorAll("a:link");
-  const bodyEl = document.querySelector("body");
 
   allLinks.forEach(function (element) {
     element.addEventListener("click", function (e) {
@@ -41,12 +39,33 @@ function enableSmoothScrolling() {
 
       // disable mobile nav
       if (el.classList.contains("nav-list-link")) {
-        bodyEl.classList.remove("mobile-nav-open");
+        document.body.classList.remove("mobile-nav-open");
       }
     });
   });
 }
 
+function enableStickyNavigation() {
+  const heroSectionEl = document.querySelector(".section-hero");
+
+  const observer = new IntersectionObserver(function (entries) {
+    const entry = entries[0];
+    console.log(entry);
+    if (entry.isIntersecting) {
+      document.body.classList.remove("sticky")
+    } else {
+      document.body.classList.add("sticky")
+    }
+  }, {
+    root: null,
+    threshold: 0,
+    // 8rem size of header
+    rootMargin: "-80px"
+  });
+  observer.observe(heroSectionEl);
+}
+
 updateCopyrightDate();
 enableMobileNavigation();
 enableSmoothScrolling();
+enableStickyNavigation();
