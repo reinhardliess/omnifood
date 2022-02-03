@@ -39,17 +39,21 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script defer src="./resources/js/script.js"></script>
   </head>
 
   <body>
     <header class="header">
-      <div class="logo">
-        <a href="#"
-          ><img src="resources/img/omnifood-logo.png" alt="Omnifood logo"
-        /></a>
-      </div>
+      <a href="#"
+        ><img
+          class="logo"
+          src="resources/img/omnifood-logo.png"
+          alt="Omnifood logo"
+      /></a>
       <nav aria-label="Site navigation" class="main-nav">
         <ul>
           <li class="nav-list">
@@ -125,11 +129,15 @@
             </div>
           </div>
           <div class="hero-imgbox">
-            <img
-              src="resources/img/hero.png"
+            <picture>
+              <source srcset="./resources/img/hero.webp" type="image/webp">
+              <source srcset="./resources/img/hero-min.png" type="image/png">
+              <img
+              src="resources/img/hero-min.png"
               alt="Young woman enjoying food, bowls on table, food images on smartphone display"
               class="hero-img"
-            />
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -241,7 +249,10 @@
               <p class="meals--description">Japanese Gyozas</p>
               <ul class="list">
                 <li>
-                  <ion-icon class="meals--icon-list" name="flame-outline"></ion-icon
+                  <ion-icon
+                    class="meals--icon-list"
+                    name="flame-outline"
+                  ></ion-icon
                   ><span><strong>650</strong> Calories</span>
                 </li>
                 <li>
@@ -252,7 +263,10 @@
                   ><span> NutriScore &reg;: <strong>74</strong> </span>
                 </li>
                 <li>
-                  <ion-icon class="meals--icon-list" name="star-outline"></ion-icon
+                  <ion-icon
+                    class="meals--icon-list"
+                    name="star-outline"
+                  ></ion-icon
                   ><span>Rating: <strong>4.9</strong> (537)</span>
                 </li>
               </ul>
@@ -269,7 +283,10 @@
               <p class="meals--description">Avocado Salad</p>
               <ul class="list">
                 <li>
-                  <ion-icon class="meals--icon-list" name="flame-outline"></ion-icon
+                  <ion-icon
+                    class="meals--icon-list"
+                    name="flame-outline"
+                  ></ion-icon
                   ><span><strong>400</strong> Calories</span>
                 </li>
                 <li>
@@ -280,7 +297,10 @@
                   ><span> NutriScore &reg;: <strong>92</strong> </span>
                 </li>
                 <li>
-                  <ion-icon class="meals--icon-list" name="star-outline"></ion-icon
+                  <ion-icon
+                    class="meals--icon-list"
+                    name="star-outline"
+                  ></ion-icon
                   ><span>Rating: <strong>4.8</strong> (441)</span>
                 </li>
               </ul>
@@ -639,11 +659,12 @@
       <div class="container footer--container grid">
         <div class="footer--logo-col">
           <div class="footer--logo">
-            <div class="logo">
-              <a href="#"
-                ><img src="resources/img/omnifood-logo.png" alt="Omnifood logo"
-              /></a>
-            </div>
+            <a href="#"
+              ><img
+                class="logo"
+                src="resources/img/omnifood-logo.png"
+                alt="Omnifood logo"
+            /></a>
           </div>
           <ul class="footer--social-links">
             <li>
