@@ -67,5 +67,10 @@ function enableStickyNavigation() {
 
 updateCopyrightDate();
 enableMobileNavigation();
-enableSmoothScrolling();
+
+const motionQuery = window.matchMedia('(prefers-reduced-motion)');
+if (!motionQuery.matches) {
+  enableSmoothScrolling();
+}
+
 enableStickyNavigation();
