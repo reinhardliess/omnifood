@@ -689,9 +689,15 @@ ul {
 }
 
 .pricing--card {
+  display: flex;
+  flex-direction: column;
   width: 75%;
   padding: 4.8rem;
   border-radius: var(--bdrs-bigger);
+}
+
+.pricing--card .list {
+  margin-bottom: 4.8rem;
 }
 
 .pricing--card:nth-child(1) {
@@ -746,7 +752,11 @@ ul {
 }
 
 .pricing--sign-up {
-  margin-top: 4.8rem;
+  /*
+    Align sign-up button in relation to the bottom of the pricing card
+    in conjunction with setting margin-bottom on .pricing--card .list
+  */
+  margin-top: auto;
   text-align: center;
 }
 
@@ -879,6 +889,7 @@ Use linear gradient with transparency
   padding: 1.2rem;
   width: 100%;
   border: none;
+  margin-top: 1rem;
 }
 
 .btn--submit:hover,
