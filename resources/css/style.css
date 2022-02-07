@@ -319,6 +319,7 @@ ul {
 
 .logo {
   height: 2.2rem;
+  vertical-align: bottom;
 }
 
 /* == Main Navigation == */
@@ -921,6 +922,7 @@ Use linear gradient with transparency
 .social-icon {
   width: 2.4rem;
   height: 2.4rem;
+  vertical-align: bottom;
 }
 
 .logo-instagram:link,
