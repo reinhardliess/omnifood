@@ -83,7 +83,8 @@
   box-sizing: inherit;
 }
 
-*:focus {
+/* remove focus styles from all sections that might get focussed when scrolled to by JavaScript */
+*:not(section):focus {
   outline: none;
   /* main-color */
   box-shadow: 0 0 0 0.8rem #e67d2280;
