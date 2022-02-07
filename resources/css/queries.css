@@ -40,7 +40,7 @@
   }
 
   .main-nav ul {
-    gap: 3.2rem;
+    gap: 4.8rem;
   }
 
   .hero {
@@ -57,11 +57,6 @@
   :root {
     font-size: 50%;
   }
-
-  /* prevent sliding-in mobile nav from being visible */
-  /* body {
-    overflow-x: hidden;
-  } */
 
   /* == Mobile Navigation == */
   .header--mobile-btn-nav {
@@ -95,7 +90,8 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    /* transform: translateX(100%); */
+    /* Hide navigation */
+    transform: translateX(100%);
   }
 
   @supports (backdrop-filter: blur(5px)) {
@@ -107,7 +103,7 @@
 
   .main-nav ul {
     flex-direction: column;
-    font-size: 2.4rem;
+    font-size: 2.7rem;
   }
 
   /* Mobile navigation active */
@@ -115,6 +111,8 @@
   /* create modal window */
   body.mobile-nav-open {
     overflow-y: hidden;
+    /* necessary for mobile */
+    position: fixed;
   }
 
   .mobile-nav-open .main-nav {
@@ -122,7 +120,7 @@
     pointer-events: auto;
     visibility: visible;
     /* slide in */
-    /* transform: translateX(0); */
+    transform: translateX(0);
   }
 
   .mobile-nav-open .mobile-nav-icon[name="close-outline"] {
@@ -283,10 +281,6 @@
     height: 1.2rem;
   }
 
-  /* .section-how {
-    padding: 4.8rem 0;
-  } */
-
   .step-imgbox {
     transform: translateY(2.4rem);
   }
@@ -300,17 +294,10 @@
   }
 
   /* == Section: Meals == */
-  /* .section-meals {
-    padding: 4.8rem 0;
-  } */
 
   .testimonials--grid {
     grid-template-columns: 1fr;
   }
-
-  /* .testimonials--quote-box {
-    padding: 4.8rem 3.2rem;
-  } */
 
   .testimonials--gallery {
     grid-template-columns: repeat(4, 1fr);
@@ -319,10 +306,6 @@
   .pricing--sub-text {
     margin-bottom: 4.8rem;
   }
-
-  /* .section-pricing {
-    padding: 4.8rem 0;
-  } */
 
   .cta--container {
     grid-template-columns: 1fr;
