@@ -27,7 +27,7 @@
 
 */
 
-@import "debug-styles.css";
+/* @import "debug-styles.css"; */
 
 :root {
   /* 1rem = 10px */
@@ -127,10 +127,6 @@ button {
 p,
 li {
   line-height: var(--lh-paragraph);
-}
-
-li {
-  list-style: none;
 }
 
 ul {
@@ -339,7 +335,6 @@ ul {
   height: 8rem;
   width: 100%;
   background-color: #fff;
-  /* --color-main-tint90 */
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.075);
   z-index: 999;
 }
@@ -712,13 +707,14 @@ ul {
 }
 
 .pricing--card:nth-child(2)::after {
-  content: "Best Value";
-  background-color: var(--color-tag-paleo);
   position: absolute;
   top: 5%;
   right: -9.5%;
+  content: "Best Value";
+  background-color: var(--color-tag-paleo);
   font-size: 1.4rem;
   font-weight: 700;
+  text-transform: uppercase;
   padding: 0.8rem 4rem;
   transform: rotate(45deg);
 }
@@ -748,9 +744,6 @@ ul {
   padding-right: 0.5rem;
 }
 
-.pricing--plan-price-text {
-}
-
 .pricing--sign-up {
   /*
     Align sign-up button in relation to the bottom of the pricing card
@@ -769,12 +762,6 @@ ul {
 }
 
 /* Features */
-
-.pricing--features {
-}
-
-.pricing--features-box {
-}
 
 .pricing--features-heading {
   color: var(--color-grey-shade60);
@@ -818,7 +805,7 @@ Use linear gradient with transparency
   background-image: linear-gradient(
       to bottom right,
       #e98b3840,
-      /* 1 */ #e67d2240 /* 2 */
+      #e67d2240
     ),
     url("../img/eating.jpg");
   background-size: cover;
