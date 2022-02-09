@@ -320,3 +320,51 @@
     font-size: 1.4rem;
   }
 }
+
+/* == Fix for browsers not supporting the flexbox gap property == */
+
+.no-flexbox-gap .main-nav ul li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list li:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.no-flexbox-gap .meals--icon-list,
+.no-flexbox-gap .icon-list {
+  margin-right: 1.4rem;
+}
+
+.no-flexbox-gap .delivered-meals:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .meals--details:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+.no-flexbox-gap .meals--details li:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+.no-flexbox-gap .footer--social-links li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer--nav-list:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav ul li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .no-flexbox-gap .main-nav ul li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
