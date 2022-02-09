@@ -178,7 +178,7 @@
 
   .pricing--card {
     /* width: 75%; */
-    width: 100%;
+    /* width: 100%; */
     padding: 4.5rem;
   }
 
@@ -221,6 +221,10 @@
 
   .meals--description {
     font-size: 2.4rem;
+  }
+
+  .pricing--card {
+    width: 100%;
   }
 
   .footer--container {
@@ -303,6 +307,16 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .pricing--card {
+    width: 100%;
+  }
+
+  /* fix for "best value" ribbon on wider phones */
+  .pricing--card:nth-child(2)::after {
+    top: 5%;
+    right: -7%;
+  }
+
   .pricing--sub-text {
     margin-bottom: 4.8rem;
   }
@@ -318,6 +332,13 @@
 
   .footer--nav-link span {
     font-size: 1.4rem;
+  }
+}
+
+/* restore "best value" ribbon position */
+@media (max-width: 28em) {
+  .pricing--card:nth-child(2)::after {
+    right: -9.5%;
   }
 }
 
