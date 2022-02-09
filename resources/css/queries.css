@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* Media queries for the Omnifood project */
 
 /* == Breakpoint: 1344px, small laptops == */
@@ -199,6 +200,15 @@
   }
 }
 
+/* adjust "best value" ribbon position */
+@media (max-width: 52em) {
+  .pricing--card:nth-child(2)::after {
+    top: 5.5%;
+    right: -16%;
+    padding: 0.8rem 6rem;
+  }
+}
+
 /* == Breakpoint: 736px, small tablets == */
 @media (max-width: 46em) {
   .heading-secondary {
@@ -313,7 +323,7 @@
 
   /* fix for "best value" ribbon on wider phones */
   .pricing--card:nth-child(2)::after {
-    top: 5%;
+    top: 6%;
     right: -7%;
   }
 
@@ -338,7 +348,9 @@
 /* restore "best value" ribbon position */
 @media (max-width: 28em) {
   .pricing--card:nth-child(2)::after {
-    right: -9.5%;
+    top: 5.5%;
+    right: -13%;
+    padding: 0.8rem 6rem;
   }
 }
 

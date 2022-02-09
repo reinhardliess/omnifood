@@ -709,13 +709,13 @@ ul {
 .pricing--card:nth-child(2)::after {
   position: absolute;
   top: 5%;
-  right: -9.5%;
+  right: -11.5%;
   content: "Best Value";
   background-color: var(--color-tag-paleo);
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.8rem 4rem;
+  padding: 0.8rem 5rem;
   transform: rotate(45deg);
 }
 
@@ -802,11 +802,7 @@ Use linear gradient with transparency
 2. --color-main
 */
 .cta--img-box {
-  background-image: linear-gradient(
-      to bottom right,
-      #e98b3840,
-      #e67d2240
-    ),
+  background-image: linear-gradient(to bottom right, #e98b3840, #e67d2240),
     url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
