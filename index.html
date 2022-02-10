@@ -130,12 +130,12 @@
           </div>
           <div class="hero-imgbox">
             <picture>
-              <source srcset="./resources/img/hero.webp" type="image/webp">
-              <source srcset="./resources/img/hero-min.png" type="image/png">
+              <source srcset="./resources/img/hero.webp" type="image/webp" />
+              <source srcset="./resources/img/hero-min.png" type="image/png" />
               <img
-              src="resources/img/hero-min.png"
-              alt="Young woman enjoying food, bowls on table, food images on smartphone display"
-              class="hero-img"
+                src="resources/img/hero-min.png"
+                alt="Young woman enjoying food, bowls on table, food images on smartphone display"
+                class="hero-img"
               />
             </picture>
           </div>
@@ -618,15 +618,21 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </div>
-              <form action="#" class="cta--form">
+              <form name="cta" class="cta--form" netlify>
                 <div>
                   <label for="name">Full Name</label
-                  ><input id="name" type="text" placeholder="John Doe" />
+                  ><input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="John Doe"
+                  />
                 </div>
                 <div>
                   <label for="email">Email Address</label
                   ><input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="john@example.com"
                   />
