@@ -3,7 +3,6 @@
     "@hint/configuration-web-recommended": "^8.2.6",
     "@hint/hint-html-checker": "^3.3.14",
     "hint": "^6.1.9",
-    "htmlhint": "^1.0.0",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0"
   }
